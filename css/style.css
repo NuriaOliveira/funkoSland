@@ -45,7 +45,7 @@ main {
 .header nav ul li {
     text-decoration: none;
     padding: 0.8rem;
-    font-family: 'Petit Formal Script', cursive;
+    font-family: 'Bruno Ace SC', cursive;
     color: white;
 }
 
@@ -55,7 +55,6 @@ main {
 
 .footer {
     grid-area: 3 / 1 / 4 / 4;
-    background-image: url(../img/madera.jfif);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -79,7 +78,7 @@ main {
 }
 
 h1 {
-    font-family: 'Petit Formal Script', cursive;
+    font-family: 'Bruno Ace SC', cursive;
     text-align: center;
 }
 

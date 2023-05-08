@@ -19,20 +19,39 @@ const productos = [
     {id:18, categoria: "PIXAR", descripcion: "BUZZ LIGHTYEAR", precio: 15, stock: 50},
 ];
 
+try {
+    //Cargar productos en pantalla principal
+    let lista_productos = document.getElementById("lista_productos")
 
-let lista_productos = document.getElementById("lista_productos")
+    productos.forEach((producto)=>{
+        
+        const funko = document.createElement("div");
+        funko.className = "col";
+        funko.innerHTML = `         <div class="card">
+                                        <img src="./img/${producto.id}.png" class="card-img-top" alt="funko">
+                                        <div class="card-body">
+                                            <h5 id="idProducto" hidden>${producto.id}</h5>
+                                            <h5 class="card-title">${producto.descripcion}</h5>
+                                            <h6>${producto.categoria}</h6>
+                                            <p class="card-text">Precio: U$S ${producto.precio}</p>
+                                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <button id = "btnAgregarCarrito" class="btn btn-dark" type="button">Agregar al carrito</button>
+                                            </div>
+                                        </div>
+                                    </div>`;
+        lista_productos.append(funko);
 
-productos.forEach((producto)=>{
-    
-    let funko = document.createElement("div");
-    funko.className = "col";
-    funko.innerHTML = `         <div class="card">
-                                    <img src="./img/${producto.id}.png" class="card-img-top" alt="funko">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${producto.descripcion}</h5>
-                                        <h6>${producto.categoria}</h6>
-                                        <p class="card-text">Precio: U$S ${producto.precio}</p>
-                                    </div>
-                                </div>`;
-    lista_productos.append(funko);
-});
+        //Boton agregar a carrito
+        let boton = funko.querySelector("#btnAgregarCarrito");
+
+        boton.addEventListener("click",() => {
+            
+            let descripcion = document.getElementById("idProdcuto");
+            console.log(`id porducto ${producto.id}`)})
+            
+    });
+
+} catch (error) {
+    console.error(error)
+}
+
